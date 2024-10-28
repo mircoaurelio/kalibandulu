@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Bandulu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: #f5cc2d;
+        }
+        .full-screen {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-image {
+            height: 100vh;
+        }
+
+        @media (max-width: 991px) {
+            .hero-image {
+                height: 50vh;
+            }
+            
+            .logo-column {
+                height: 50vh;
+                background-color: black;
+            }
+        }
+
+        .logo-column {
+            background-color: black;
+            padding: 2rem;
+        }
+
+        .hero-logo {
+            max-width: 80%;
+            height: auto;
+            max-height: 70vh;
+            object-fit: contain;
+        }
+
+        .description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: white;
+            max-width: 800px;
+            margin: 2rem auto;
+            line-height: 1.6;
+        }
+        .scroll-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0.3; }
+        }
+        .nav-link, .footer-icon {
+            color: #f5cc2d !important;
+        }
+        .section-header {
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .card {
+            background-color: #333;
+            color: #f5cc2d;
+        }
+        footer {
+            background-color: #111;
+            padding: 1rem;
+            text-align: center;
+        }
+        .footer-icon {
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+        .chi-siamo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+            text-align: left;
+    color: white;
+
+            padding: 1rem;
+        }
+
+        .card-header h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: 2.5rem;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            max-width: 1000px;
+        }
+
+        .card-header {
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        @font-face {
+            font-family: "LTC Flash W00 Regular";
+            src: url("https://db.onlinewebfonts.com/t/25751bbfe83d9c575e60039e28ee6eb8.eot");
+            src: url("https://db.onlinewebfonts.com/t/25751bbfe83d9c575e60039e28ee6eb8.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/25751bbfe83d9c575e60039e28ee6eb8.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/25751bbfe83d9c575e60039e28ee6eb8.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/25751bbfe83d9c575e60039e28ee6eb8.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/25751bbfe83d9c575e60039e28ee6eb8.svg#LTC Flash W00 Regular")format("svg");
+        }
+
+        .text-column {
+            background-color: black;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-family: "LTC Flash W00 Regular";
+            font-size: 8rem;
+            color: #f5cc2d;
+            text-align: center;
+            line-height: 1.2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        @media (max-width: 991px) {
+            .hero-image {
+                height: 50vh;
+            }
+            
+            .logo-column {
+                height: 50vh;
+                background-color: black;
+            }
+            
+            .text-column {
+                height: 50vh;
+            }
+
+            h1 {
+                font-size: 4rem; /* Smaller font size for mobile */
+            }
+        }
+
+        /* For extra small screens */
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        /* Add these styles */
+        .nav-logo {
+            height: 80px;
+            width: auto;
+            margin-right: 1rem;
+        }
+
+        .navbar {
+            padding: 1rem 2rem;
+        }
+
+        .navbar-nav {
+            font-family: "LTC Flash W00 Regular";
+            font-size: 1.2rem;
+        }
+
+        .nav-link {
+            color: #f5cc2d !important;
+            margin: 0 1rem;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+
+        .card {
+            transition: transform 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 991px) {
+            .nav-logo {
+                height: 30px;
+            }
+            
+            .navbar-nav {
+                text-align: center;
+                margin: 1rem 0;
+            }
+            
+            .navbar-brand {
+                margin: 1rem auto;
+            }
+        }
+
+        /* Update these styles */
+        .navbar {
+          
+            padding: 1.5rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: linear-gradient(to bottom, 
+                rgba(0, 0, 0, 0.9) 0%,
+                rgba(0, 0, 0, 0.7) 50%,
+                rgba(0, 0, 0, 0) 100%) !important;
+        }
+
+        .hero-image-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 20%;
+            background: linear-gradient(to right, transparent, rgba(0, 0, 0, 1));
+            z-index: 1;
+        }
+
+        .gradient-overlay::after {
+            content: '';
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 50vw;
+    height: 16%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    z-index: 1;
+        }
+
+        .text-column {
+            background-color: black;
+            padding: 2rem;
+        }
+
+        /* Add this JavaScript to handle navbar background on scroll */
+
+        /* Mobile version adjustments */
+        @media (max-width: 991px) {
+            .hero-image-container {
+                height: 50vh; /* Adjust height for mobile */
+            }
+            
+            .gradient-overlay {
+                display: none; /* Remove gradient overlay on mobile */
+            }
+            
+            .gradient-overlay::after {
+                display: none; /* Remove second gradient on mobile */
+            }
+            
+            .hero-image {
+                height: 50vh;
+                object-fit: cover;
+            }
+        }
+
+        /* Add these styles for the scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .scroll-arrow {
+            width: 30px;
+            height: 30px;
+            border-right: 3px solid white;
+            border-bottom: 3px solid white;
+            transform: rotate(45deg);
+            animation: blink 2s infinite;
+            cursor: pointer;
+        }
+
+        .scroll-text {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeInOut 2s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+                transform: rotate(45deg) translate(-20px, -20px);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: rotate(45deg) translate(0, 0);
+            }
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Hide on scroll */
+        .scroll-indicator.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 991px) {
+            .scroll-indicator {
+                bottom: 20px;
+            }
+        }
+
+        /* Update navbar gradient */
+        .navbar {
+           
+            padding: 1.5rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: linear-gradient(to bottom, 
+                rgba(0, 0, 0, 0.9) 0%,
+                rgba(0, 0, 0, 0.7) 50%,
+                rgba(0, 0, 0, 0) 100%) !important;
+        }
+
+        /* Update card styles */
+        .card {
+            position: relative;
+            border: none;
+            border-radius: 0; /* Make cards square */
+            overflow: hidden;
+            aspect-ratio: 1; /* Force square shape */
+            margin-bottom: 2rem;
+        }
+
+        .card-img-top {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Gradient overlay */
+        .card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 0.2) 50%,
+                rgba(0, 0, 0, 0.6) 100%
+            );
+            z-index: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::after {
+            opacity: 0.8; /* Darken overlay on hover */
+        }
+
+        /* Position text over image */
+        .card-body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            background: transparent;
+            padding: 1.5rem;
+        }
+
+        .card-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: white;
+            margin: 0;
+            text-align: left;
+        }
+
+        /* Hover effects */
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        /* Update card container spacing */
+        .row.g-4 {
+            --bs-gutter-x: 1rem;
+            --bs-gutter-y: 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .card {
+                aspect-ratio: 1; /* Maintain square shape on mobile */
+            }
+            
+            .card-text {
+                font-size: 1rem;
+            }
+        }
+
+        /* Update navigation styles */
+        .navbar-nav .nav-link {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white !important; /* Enforced white color */
+            margin: 0 1.5rem;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        /* Update hover state */
+        .navbar-nav .nav-link:hover {
+            color: rgba(255, 255, 255, 0.8) !important; /* Slightly transparent white on hover */
+        }
+
+        /* Optional: underline effect */
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Fix for mobile hamburger menu */
+        .navbar-toggler {
+            border-color: white !important;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        }
+
+        /* Add these styles */
+        .about-section {
+            background-color: black;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .about-text {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .slogan {
+            font-family: "LTC Flash W00 Regular";
+            font-size: 3.5rem;
+            color: #f5cc2d;
+            text-align: center;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .contact-section {
+            background-color: black;
+            color: white;
+            padding: 60px 0;
+        }
+
+        .contact-section h2 {
+            font-family: "LTC Flash W00 Regular";
+            font-size: 2.5rem;
+            color: #f5cc2d;
+            margin-bottom: 30px;
+        }
+
+        .email-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 0px solid white;
+            border-radius: 5px;
+        }
+
+        .email-link:hover {
+            color: #f5cc2d;
+            border-color: #f5cc2d;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .slogan {
+                font-size: 2.5rem;
+                margin-top: 40px;
+            }
+            
+            .email-link {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Add cursor pointer to indicate clickable */
+        .card {
+            cursor: pointer;
+        }
+
+        /* Modal styles */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .modal-image {
+            max-height: 80vh;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Animation for modal */
+        @keyframes modalFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .image-modal.active {
+            display: block;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        /* Add these styles for the music player cards */
+        #music .card {
+            background-color: #333;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            aspect-ratio: auto;
+        }
+
+        #music .card-title {
+            color: #f5cc2d;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        #music .card-body {
+            padding: 1.5rem;
+        }
+
+        #music iframe {
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            #music iframe {
+                height: 300px;
+            }
+        }
+
+        /* Fixed player styles */
+        .fixed-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Adjust footer padding to prevent player overlap */
+        footer {
+            margin-bottom: 60px;
+        }
+
+        /* Adjust for mobile */
+        @media (max-width: 768px) {
+            .fixed-player iframe {
+                height: 60px;
+            }
+        }
+
+        /* Update these navbar styles */
+        .navbar {
+            background: transparent !important; /* Force transparency */
+            padding: 1.5rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: linear-gradient(to bottom, 
+                rgba(0, 0, 0, 0.9) 0%,
+                rgba(0, 0, 0, 0.7) 50%,
+                rgba(0, 0, 0, 0) 100%) !important;
+        }
+
+        /* Mobile navbar adjustments */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: rgba(0, 0, 0, 0.8); /* Semi-transparent background for menu items */
+                border-radius: 10px;
+                padding: 1rem;
+                margin-top: 1rem;
+            }
+            
+            .navbar {
+                background: transparent !important; /* Keep navbar transparent on mobile */
+            }
+            
+            .navbar.scrolled {
+                background: transparent !important; /* Keep navbar transparent when scrolled on mobile */
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Update the navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chi-siamo">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#media">Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#music">Mixtapes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contatti">Contacts</a>
+                    </li>
+                </ul>
+                <div class="navbar-brand">
+                    <img src="img/logo_giallo.png" alt="Kali Bandulu Logo" class="nav-logo">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="full-screen">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <!-- Image Column with gradient -->
+                <div class="col-lg-6 p-0 hero-image-container order-lg-1 order-2">
+                    <div class="gradient-overlay"></div>
+                    <img src="img/YAD_2.jpg" alt="KaliBandulu" class="hero-image">
+                </div>
+                <!-- Logo Column -->
+                <div class="col-lg-6 d-flex align-items-center justify-content-center text-column order-lg-2 order-1">
+                    <img src="img/Senza titolo-1.jpg" alt="KaliBandulu" class="hero-image">
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+             
+            </div>
+        </div>
+    </section>
+
+    <!-- Chi Siamo Section -->
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text Column -->
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <h2>About us</h2>
+                        <p class="chi-siamo-text">
+                            Kalibandulu was founded in Milan in 1999 by MC and Deejay Rebel T and in a short time has established itself as one of the most representative sounds of Reggae and Dancehall music in the whole peninsula.
+                            Over the years the sound expands and grows quickly coming to tread the stages
+                            throughout Italy and Europe with unique Clash and parties of their kind becoming a solid point of reference for the whole scene. In the second decade they started international collaborations of the caliber of Major Lazer that bring the sound overseas to the States. On the national front they organize more and more parties, mainly in Milan and Salento bringing international Reggae artists to Italy.
+                        </p>
+                    </div>
+                </div>
+                <!-- Slogan Column -->
+                <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                    <h1 class="slogan">"The Original Dancehall Militia Since 1999"</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+   
+
+    <!-- Media Section -->
+    <section id="media" class="container my-5"> 
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card" onclick="openModal(this.querySelector('.card-img-top').src)">
+                    <img src="img/loc_1.jpg" class="card-img-top" alt="Kali Bandulu">
+                    <div class="card-body">
+                        <p class="card-text">Kali Bandulu Live Performance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/loc_2.jpg" class="card-img-top" alt="Kali Bandulu">
+                    <div class="card-body">
+                        <p class="card-text">Dancehall Vibes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/loc_4.jpg" class="card-img-top" alt="Kali Bandulu">
+                    <div class="card-body">
+                        <p class="card-text">Sound System Culture</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/loc_5.jpg" class="card-img-top" alt="Kali Bandulu">
+                    <div class="card-body">
+                        <p class="card-text">Sound System Culture</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/loc_6.jpg" class="card-img-top" alt="Kali Bandulu">
+                    <div class="card-body">
+                        <p class="card-text">Sound System Culture</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/loc_7.jpg" class="card-img-top" alt="Kali Bandulu">
+                    <div class="card-body">
+                        <p class="card-text">Sound System Culture</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
+    <section id="music" class="container my-5">
+        <div class="row g-4">
+            <h2 class="text-center mb-4" style="font-size: 3.5rem; color: #f5cc2d; font-family: 'LTC Flash W00 Regular';">MIXTAPES</h2>
+            <div class="col-md-3 col-sm-6">
+                <div class="">
+                    <iframe width="100%" height="400" src="https://player-widget.mixcloud.com/widget/iframe/?hide_artwork=1&autoplay=1&feed=%2FOFFICIAL_KALI_BANDULU%2Fdi-fayah-yuh-cyaan-quench-throwback-riddims-edition-host-by-allgi-outta-sentinel%2F" frameborder="0" allow="autoplay"></iframe> 
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="">
+                    <iframe width="100%" height="400" src="https://player-widget.mixcloud.com/widget/iframe/?hide_artwork=1&autoplay=1&feed=%2FOFFICIAL_KALI_BANDULU%2Fkalibandulu-sound-back-2-di-biziniz-mixtape-dancehall-mix-2024%2F" frameborder="0" allow="autoplay"></iframe>
+                     
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="">
+                    <iframe width="100%" height="400" src="https://player-widget.mixcloud.com/widget/iframe/?hide_artwork=1&autoplay=1&feed=%2FOFFICIAL_KALI_BANDULU%2Fdi-fyah-yuh-cyaan-quench-vol2-host-by-ceiboulevard%2F" frameborder="0" allow="autoplay"></iframe>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                      <div class="">
+                        <iframe width="100%" height="400" src="https://player-widget.mixcloud.com/widget/iframe/?hide_artwork=1&autoplay=1&feed=%2FOFFICIAL_KALI_BANDULU%2Fkali-bandulu-di-fyah-yuh-cyaan-quench%2F" frameborder="0" allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="img/BANDO ILLUSTRATION_KB (provvisoria) (2).jpeg" alt="Kali Bandulu Illustration" style="width: 50%; height: auto; margin: auto; display: block;">
+            </div>
+        </div>
+    </section>
+    <section class="contact-section py-5" id="contatti">
+        <div class="container text-center">
+            <h2>Contact</h2>
+            <div class="mt-4">
+                <a href="mailto:officialkalibadulu@gmail.com" class="email-link">
+                    officialkalibadulu@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <a href="https://www.mixcloud.com/OFFICIAL_KALI_BANDULU/" target="_blank" class="footer-icon"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="footer-icon"><i class="bi bi-facebook"></i></a>
+        <a href="https://soundcloud.com/kalibandulu-official" target="_blank" class="footer-icon"><i class="bi bi-soundcloud"></i></a>
+        <a href="https://www.mixcloud.com/OFFICIAL_KALI_BANDULU/" target="_blank" class="footer-icon"><i class="bi bi-mixcloud"></i></a>
+        <a href="#" class="footer-icon"><i class="bi bi-tiktok"></i></a>
+        <p class="mt-2">© 2024 KaliBandulu</p>
+    </footer>
+
+    <!-- Bootstrap JS and Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Add this before closing body tag -->
+    <script>
+        let hasScrolled = false;
+
+        document.addEventListener('scroll', function() {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            const scrollPosition = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            
+            // Hide scroll indicator only after scrolling past 120vh
+            if (scrollPosition > viewportHeight * 1.2) {
+                scrollIndicator.classList.add('hidden');
+                hasScrolled = true;
+                localStorage.setItem('hasScrolledBefore', 'true');
+            } else {
+                scrollIndicator.classList.remove('hidden');
+            }
+
+            // Update navbar background (keep existing navbar behavior)
+            const navbar = document.querySelector('.navbar');
+            if (scrollPosition > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Optional: Check if user has scrolled before on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            if (localStorage.getItem('hasScrolledBefore')) {
+                scrollIndicator.classList.add('hidden');
+                hasScrolled = true;
+            }
+        });
+    </script>
+   
+    <!-- Add this at the end of your body tag -->
+    <div class="image-modal" id="imageModal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img src="" alt="" class="modal-image" id="modalImage">
+        </div>
+    </div>
+
+    <!-- Add this JavaScript before the closing body tag -->
+    <script>
+        // Get modal elements
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.close-modal');
+
+        // Function to open modal
+        function openModal(imgSrc) {
+            modal.classList.add('active');
+            modalImg.src = imgSrc;
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+
+        // Close modal when clicking close button or outside the image
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal || e.target === closeBtn) {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+
+        // Close modal with escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+    </script>
+
+    <!-- Music Players Section -->
+  
+    <!-- Add this right before closing body tag -->
+    <div class="fixed-player">
+        <iframe 
+            width="100%" 
+            height="60" 
+            src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&hide_artwork=1&autoplay=1&feed=%2FOFFICIAL_KALI_BANDULU%2Fkalibandulu-sound-back-2-di-biziniz-mixtape-dancehall-mix-2024%2F" 
+            frameborder="0" 
+            allow="autoplay">
+        </iframe>
+    </div>
+
+    <style>
+        /* Fixed player styles */
+        .fixed-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Adjust footer padding to prevent player overlap */
+        footer {
+            margin-bottom: 60px;
+        }
+
+        /* Adjust for mobile */
+        @media (max-width: 768px) {
+            .fixed-player iframe {
+                height: 60px;
+            }
+        }
+    </style>
+</body>
+</html>
